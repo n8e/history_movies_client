@@ -11,3 +11,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.loadingData {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+}
+
+.loadingData .spinner-border {
+  /* Adjust styles for the spinner if needed */
+}
+
+
+@import '~bootstrap/scss/bootstrap.scss';

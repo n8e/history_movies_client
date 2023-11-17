@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { editUser } from "../../actions/userActions";
 export const ProfileEditView = ({ clickUpdate, token }) => {
     const dispatch = useDispatch();
-    const { user, loading, error } = useSelector((state) => state.user);
+    const { user } = useSelector((state) => state.user);
 
     const [updatedUserData, setUpdatedUserData] = useState(user);
     const handleChange = (e) => {

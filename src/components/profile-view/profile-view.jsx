@@ -33,9 +33,7 @@ export const ProfileView = ({ clickUpdate, movies, token }) => {
                 </div>
             );
         } else if (error) {
-            {
-                return <Alert variant="danger">{error}</Alert>;
-            }
+            return <Alert variant="danger">{error}</Alert>;
         }
         return (
             <>

@@ -7,7 +7,7 @@ import { Spinner } from "react-bootstrap";
 import { addFavoriteMovieToUser } from "../../actions/userActions";
 import { useDispatch, useSelector } from "react-redux";
 export const MovieView = ({ movies }) => {
-    const { user, loading, error } = useSelector((state) => state.user);
+    const { user, loading } = useSelector((state) => state.user);
     const { movieId } = useParams();
     const dispatch = useDispatch();
     const storedUser = JSON.parse(localStorage.getItem("user"));

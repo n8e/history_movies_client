@@ -20,18 +20,18 @@ export const MainView = () => {
 
     // Retrieve token from local storage or set it to null if not present
     const storedToken = localStorage.getItem("token");
-    const [token, setToken] = useState(storedToken ? storedToken : null);
+    const [token] = useState(storedToken ? storedToken : null);
 
     const [isEditingProfile, setUserEdit] = useState(null);
     const dispatch = useDispatch();
 
     useEffect(() => {
         dispatch(getMovies());
-    }, []);
+    }, [dispatch]);
 
     // Get user information and movie data from Redux store
     const user = useSelector((state) => state.user);
-    const { movies, loading, error } = useSelector((state) => state.movies);
+    const { movies, loading } = useSelector((state) => state.movies);
 
     // Map movies to MovieCard components
     const updatedMovie = movies.map((movie) => (

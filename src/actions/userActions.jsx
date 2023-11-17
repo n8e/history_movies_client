@@ -182,18 +182,18 @@ export const unFavoriteMovie = (user, movieId) => async (dispatch) => {
     try {
         const encodedMovieId = encodeURIComponent(movieId);
         console.log(encodedMovieId);
-        const response = await fetch(
-            `https://history-movie-api.onrender.com/user/${user._id}/${encodedMovieId}`,
-            {
-                method: "DELETE",
-                headers: {
-                    Authorization: `Bearer ${storedToken}`,
-                    "Content-Type": "application/json",
-                },
-            }
-        );
+        // const response = await fetch(
+        //     `https://history-movie-api.onrender.com/user/${user._id}/${encodedMovieId}`,
+        //     {
+        //         method: "DELETE",
+        //         headers: {
+        //             Authorization: `Bearer ${storedToken}`,
+        //             "Content-Type": "application/json",
+        //         },
+        //     }
+        // );
 
-        const deletedFavoriteMovieFromUser = await response.json();
+        // const deletedFavoriteMovieFromUser = await response.json();
         const updatedUser = {
             ...user,
             FavoriteMovies: user.FavoriteMovies.filter((movie) => movie !== movieId),

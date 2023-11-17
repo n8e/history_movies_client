@@ -10,7 +10,7 @@ export const LoginView = () => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
 
-    const { user, loading, error } = useSelector((state) => state.user);
+    const { loading, error } = useSelector((state) => state.user);
 
     const loginUser = (event) => {
         event.preventDefault();

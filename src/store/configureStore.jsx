@@ -5,7 +5,7 @@ import movieReducer from "../reducers/movieReducer";
 const store = configureStore({
     reducer: {
         user: userReducer,
-        user: asyncUserReducer,
+        asyncUser: asyncUserReducer,
         movies: movieReducer,
     },
 });
